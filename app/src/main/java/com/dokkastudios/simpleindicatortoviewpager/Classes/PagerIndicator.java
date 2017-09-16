@@ -57,7 +57,7 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
             _mIndicators[i].setImageDrawable(_mDefaultIndicator);
 
             LinearLayout.LayoutParams _params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            _params.setMargins(2, 0, 2, 0);
+            _params.setMargins(0, 0, 0, 0);
 
             _mLayoutPagerDotIndicator.addView(_mIndicators[i], _params);
         }
