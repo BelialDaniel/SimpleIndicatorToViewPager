@@ -14,7 +14,6 @@ import com.dokkastudios.simpleindicatortoviewpager.R;
 
 public class MainApp extends AppCompatActivity
 {
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

@@ -32,12 +32,21 @@ public class FragsPagerAdapter extends FragmentPagerAdapter
         return _mFragments.get(position);
     }
 
+    /**
+     *
+     * @param _class
+     * @param _name
+     */
     public void addFragment(Class _class, String _name)
     {
         _mFragments.add(FragmentF.getFragment(_class));
         _mTitles.add(_name);
     }
 
+    /**
+     *
+     * @param _class
+     */
     public void addFragment(Class _class)
     {
         _mFragments.add(FragmentF.getFragment(_class));
