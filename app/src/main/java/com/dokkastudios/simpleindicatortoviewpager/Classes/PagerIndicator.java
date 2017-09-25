@@ -39,10 +39,10 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
     }
 
     /**
-     *
-     * @param _unselectedIndicator
-     * @param _selectedIndicator
-     * @param _theme
+     * Here you set the ID for the Unselected and Selected Indicator, this must have been defined in the drawable Folder
+     * @param _unselectedIndicator ID unselected indicator
+     * @param _selectedIndicator ID selected indicator
+     * @param _theme Any Theme
      */
     public void setIndicators(int _unselectedIndicator, int _selectedIndicator, @Nullable Resources.Theme _theme)
     {
