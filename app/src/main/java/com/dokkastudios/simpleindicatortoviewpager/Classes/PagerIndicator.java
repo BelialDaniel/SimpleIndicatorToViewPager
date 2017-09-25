@@ -40,15 +40,15 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
 
     /**
      *
-     * @param _defaultIndicator
+     * @param _unselectedIndicator
      * @param _selectedIndicator
      * @param _theme
      */
-    public void setIndicators(int _defaultIndicator, int _selectedIndicator, @Nullable Resources.Theme _theme)
+    public void setIndicators(int _unselectedIndicator, int _selectedIndicator, @Nullable Resources.Theme _theme)
     {
         _mIndicators = new ImageView[_mCountIndicators];
 
-        _mUnselectedIndicator = _mContext.getResources().getDrawable(_defaultIndicator, _theme);
+        _mUnselectedIndicator = _mContext.getResources().getDrawable(_unselectedIndicator, _theme);
         _mSelectedIndicator = _mContext.getResources().getDrawable(_selectedIndicator, _theme);
 
         for(int i = 0; i < _mCountIndicators; i++)
