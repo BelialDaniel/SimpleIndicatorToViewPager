@@ -61,7 +61,6 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
 
             _mLayoutPagerIndicator.addView(_mIndicators[i], _params);
         }
-
         _mIndicators[0].setImageDrawable(_mSelectedIndicator);
     }
 
