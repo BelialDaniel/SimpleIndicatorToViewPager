@@ -21,7 +21,7 @@
         />
 
     <LinearLayout
-        android:id="@+id/_backIndicators"
+        android:id="@+id/_indicators"
         android:layout_width="0dp"
         android:layout_height="15dp"
         android:layout_marginBottom="32dp"

@@ -3,7 +3,6 @@ package com.dokkastudios.simpleindicatortoviewpager.Activities;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ContentFrameLayout;
 import android.widget.LinearLayout;
 
 import com.dokkastudios.simpleindicatortoviewpager.Adapters.FragsPagerAdapter;
@@ -29,7 +28,7 @@ public class MainApp extends AppCompatActivity
         _vp.setAdapter(_frags);
         _vp.setCurrentItem(0, true);
 
-        PagerIndicator _pi = new PagerIndicator(getApplicationContext(), (LinearLayout) findViewById(R.id._backIndicators), 2);
+        PagerIndicator _pi = new PagerIndicator(getApplicationContext(), (LinearLayout) findViewById(R.id._indicators), _frags.getCount());
         _pi.setIndicators(R.drawable.indicator_unselected, R.drawable.indicator_selected, null);
 
         _vp.addOnPageChangeListener(_pi);
