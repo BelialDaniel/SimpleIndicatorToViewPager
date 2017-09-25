@@ -13,7 +13,7 @@ import android.view.View;
 
 public class Fragments extends Fragment
 {
-    private int mColumnCount = 1;
+    protected int mColumnCount = 1;
 
     public String FRAGMENT_TAG = "";
 
@@ -23,8 +23,8 @@ public class Fragments extends Fragment
     public Fragments() {}
 
     /**
-     *
-     * @return
+     * Call this when you work with a RecyclerView
+     * @return return the reciclerview
      */
     public RecyclerView getRecyclerView()
     {

@@ -18,23 +18,23 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
 
     private int _mCountIndicators = 0;
 
-    private LinearLayout _mLayoutPagerDotIndicator = null;
+    private LinearLayout _mLayoutPagerIndicator = null;
     private ImageView[] _mIndicators = null;
 
-    private Drawable _mDefaultIndicator = null;
+    private Drawable _mUnselectedIndicator = null;
     private Drawable _mSelectedIndicator = null;
 
 
     /**
-     *
-     * @param _context
-     * @param _layoutPagerDotIndicator
-     * @param _countIndicators
+     * Here you need to set the Layout that contains the Indicator and the number of indicator that appear
+     * @param _context The context that contain the viewpager
+     * @param _layoutPagerIndicator The layout that contain the indicators
+     * @param _countIndicators The number of indicators
      */
-    public PagerIndicator(Context _context, LinearLayout _layoutPagerDotIndicator, int _countIndicators)
+    public PagerIndicator(Context _context, LinearLayout _layoutPagerIndicator, int _countIndicators)
     {
         _mContext = _context;
-        _mLayoutPagerDotIndicator = _layoutPagerDotIndicator;
+        _mLayoutPagerIndicator = _layoutPagerIndicator;
         _mCountIndicators = _countIndicators;
     }
 
@@ -48,18 +48,18 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
     {
         _mIndicators = new ImageView[_mCountIndicators];
 
-        _mDefaultIndicator  = _mContext.getResources().getDrawable(_defaultIndicator, _theme);
+        _mUnselectedIndicator = _mContext.getResources().getDrawable(_defaultIndicator, _theme);
         _mSelectedIndicator = _mContext.getResources().getDrawable(_selectedIndicator, _theme);
 
         for(int i = 0; i < _mCountIndicators; i++)
         {
             _mIndicators[i] = new ImageView(_mContext);
-            _mIndicators[i].setImageDrawable(_mDefaultIndicator);
+            _mIndicators[i].setImageDrawable(_mUnselectedIndicator);
 
             LinearLayout.LayoutParams _params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             _params.setMargins(0, 0, 0, 0);
 
-            _mLayoutPagerDotIndicator.addView(_mIndicators[i], _params);
+            _mLayoutPagerIndicator.addView(_mIndicators[i], _params);
         }
 
         _mIndicators[0].setImageDrawable(_mSelectedIndicator);
@@ -72,7 +72,7 @@ public class PagerIndicator implements ViewPager.OnPageChangeListener
     private void setIndicatorSelected(int _position)
     {
         for (int i = 0; i < _mCountIndicators; i++)
-            _mIndicators[i].setImageDrawable(_mDefaultIndicator);
+            _mIndicators[i].setImageDrawable(_mUnselectedIndicator);
         _mIndicators[_position].setImageDrawable(_mSelectedIndicator);
     }
 
